@@ -1,0 +1,21 @@
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_BLL.dll
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_BLL.pdb
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.dll
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.pdb
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.csprojAssemblyReference.cache
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.csproj.CoreCompileInputs.cache
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.csproj.CopyComplete
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.dll
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.pdb
+C:\Users\CDIS\Desktop\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.dll.config
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_BLL.dll
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_BLL.pdb
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.dll
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.pdb
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\CdisMart_DAL.dll.config
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.csproj.CopyComplete
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.dll
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\obj\Debug\CdisMart_BLL.pdb
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\EntityFramework.dll
+C:\Users\PC\Desktop\CDIS .NET\PIA\CdisMart\CdisMart_BLL\bin\Debug\EntityFramework.xml
