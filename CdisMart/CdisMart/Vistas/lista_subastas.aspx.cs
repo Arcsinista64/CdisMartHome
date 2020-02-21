@@ -38,7 +38,8 @@ namespace CdisMart.Vistas
 
                     grd_subastas.DataSource = cargarSubastas();
                     grd_subastas.DataBind();
-
+                    
+                    
                 }
                 else
                 {

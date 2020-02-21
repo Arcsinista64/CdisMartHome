@@ -132,7 +132,7 @@ namespace CdisMart.Vistas
             dtUsuarios = usuario.consultarUsuarios();
 
             ddlUsuarios.DataSource = dtUsuarios;
-            ddlUsuarios.DataTextField = "UserId";
+            ddlUsuarios.DataTextField = "Name";
             ddlUsuarios.DataValueField = "UserId";
             ddlUsuarios.DataBind();
 

@@ -34,4 +34,21 @@
         </Columns>
 
     </asp:GridView>
+
+    <script src="scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                (function ($) {
+                    $('#CriterioBusqueda').keyup(function () {
+                        var rex = new RegExp($(this).val(), 'i');
+                        $('.contenidobusqueda  tr').hide();
+                        $('.contenidobusqueda  tr').filter(function () {
+                            return rex.test($(this).text());
+                        }).show();
+                    })
+                } (jQuery));
+            });
+        </script>
+
 </asp:Content>

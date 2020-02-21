@@ -28,7 +28,9 @@ namespace CdisMart.Vistas
             string contraseña = txtPassword.Text;
 
             usuario.altaUsuario(nombreCompleto, correoElectronico, nombreUsuario, contraseña);
+            
         }
+
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -37,52 +39,36 @@ namespace CdisMart.Vistas
             {
                 if (txtPassword.Text != txtPasswordConfirmacion.Text)
                 {
+                    error = true;
+
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "AlertPass", "passwordNoCoincide();", true);
 
-                    error = true;
                 }
                 else
                 {
                     try
                     {
-                        UserBLL userBLL = new UserBLL();
-                        DataTable dtUsuario = new DataTable();
-
-                        //dtUsuario = userBLL.consultarUsuario(txtUser.Text);
-
-                        if (dtUsuario.Rows.Count > 0)
-                        {
-
-                            throw new Exception("El usuario ya existe, introduce uno diferente.");
-
-                        }   
-                        else
-                        {
-                            altaUsuario();
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "Registro", "alert('Usuario registrado exitosamente.')", true);
-                        }
-
-                        //DELAY?
-                        //if (true)
-                        //{
-                        //    Response.Redirect("~/Login.aspx");
-                        //}
+                        error = false;
+                        altaUsuario();
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "Error", "alert('Usuario registradoexitosamente.')", true);
                     }
                     catch (Exception ex)
                     {
-                        //ScriptManager.RegisterStartupScript(this, typeof(Page), "Error", "alert('Nombre de usuario ya existente.')", true);
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "Error", "alert('" + ex.Message + "')", true);
                     }
                     finally
                     {
-                        error = false;
+                        txtUser.Text = "";
+                        txtNombreCompleto.Text = "";
+                        txtEmail.Text = "";
+                        txtPassword.Text = "";
+                        txtPasswordConfirmacion.Text = "";
                     }
-                }
-
-                txtPassword.Text = "" ;
-                txtPasswordConfirmacion.Text = "";
-                break;
+                }break;
             } while (error == true);
+
+
+
         }
     }
 }

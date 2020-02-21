@@ -16,7 +16,6 @@ namespace CdisMart_BLL
             UserDAL user = new UserDAL();
             return user.consultarUsuario(usuario, contraseña);
         }
-
         public DataTable consultarUsuarios()
         {
             UserDAL user = new UserDAL();
@@ -27,14 +26,30 @@ namespace CdisMart_BLL
             UserDAL usuarioDAL = new UserDAL();
             return usuarioDAL.consultarUsuario(usuario);
         }
+        public DataTable consultarUsuarioDuplicado(string userName)
+        {
+            UserDAL user = new UserDAL();
+            return user.consultarUsuarioDuplicado(userName);
+        }
         public void altaUsuario(string  nombreCompleto, string correoElectronico, string nombreUsuario, string contraseña)
         {
+
             UserDAL usuario = new UserDAL();
+            DataTable cantidadUsuarios = new DataTable();
+            cantidadUsuarios = usuario.consultarUsuarioDuplicado(nombreUsuario);
 
 
+            if (cantidadUsuarios.Rows.Count > 0)
+            {
+                throw new Exception("El usuario ya existe, introduce uno diferente.");
+            }
+            else
+            {
+                usuario.altaUsuario(nombreCompleto, correoElectronico, nombreUsuario, contraseña);
+
+            }
 
 
-            usuario.altaUsuario(nombreCompleto, correoElectronico, nombreUsuario, contraseña);
         }
         
 

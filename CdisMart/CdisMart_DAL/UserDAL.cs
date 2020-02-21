@@ -41,6 +41,30 @@ namespace CdisMart_DAL
 
             return dtUsuario;
         }
+        public DataTable consultarUsuarioDuplicado(string nombre)
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = @"Server=DESKTOP-KSBUJPI\SQLSERVER;Database=CdisMart;Trusted_connection=true;";
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "sp_consultarUsuarioUnico";
+            command.Connection = connection;
+
+            command.Parameters.AddWithValue("pNombre", nombre);
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dtUsuario = new DataTable();
+
+            connection.Open();
+
+            adapter.SelectCommand = command;
+            adapter.Fill(dtUsuario);
+
+            connection.Close();
+
+            return dtUsuario;
+        }
         public DataTable consultarUsuarios()
         {
             SqlConnection connection = new SqlConnection();

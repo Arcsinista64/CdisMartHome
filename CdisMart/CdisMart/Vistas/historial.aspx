@@ -20,26 +20,64 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:GridView class="table table-hover" ID="grdSubastasporID"  AutoGenerateColumns = "false" runat="server" OnRowCommand="grdSubastasporID_RowCommand">
+                <FooterStyle BackColor="SkyBlue" />
                 <Columns>
                     <asp:BoundField HeaderText = "Usuario que realizó la oferta" DataField = "UserId"/>
                     <asp:BoundField HeaderText = "Fecha de la realización de la oferta" DataField = "BidDate"/>
                     <asp:BoundField HeaderText = "Monto de la oferta"  DataField = "Amount"/>
             
-                    <asp:ButtonField CommandName ="Total"/>
+                    <asp:TemplateField HeaderText="Precio">
+                    <ItemTemplate>
+                        <asp:Label ID="lblPrecio" runat="server" ></asp:Label>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                      <asp:Label ID="lblTotal" runat="server" ></asp:Label>
+                  </FooterTemplate>
+                </asp:TemplateField>
+
                 </Columns>
+                
             </asp:GridView>
+            
         </ContentTemplate>
+
+
     </asp:UpdatePanel>
     
-     
-        
-        <div class="content table table-hover" style:"float:right;">
-
+     <div class="col-md-12" >
             <asp:Label ID="Label1" runat="server" Text="Total: "></asp:Label>
             <asp:TextBox ID="txtSumatoriaOfertas" runat="server" Enabled="false"></asp:TextBox>
         </div>
     
+        
+
+            
     
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            function CalcularTotal() {
+
+                var total = 0;
+                $("#<%=grdSubastasporID.ClientID%> [id*='Amount']").each(function () {
+
+                    var coltotal = parseFloat($(this).html());
+
+                    if (!isNaN(coltotal)) {
+                        total += coltotal;
+                    }
+
+                });
+
+                $("#<%=grdSubastasporID.ClientID%> [id*='lblTotal']").html(total);
+
+            }
+        }
+
+            
+        
+    </script>
 
 
 </asp:Content>

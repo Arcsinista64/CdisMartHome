@@ -138,7 +138,7 @@ namespace CdisMart.Vistas
             txtOfertaMasAlta.Text = dtSubasta.HighestBid.ToString();
             //this.ofertaAnterior = Decimal.Parse(dtSubasta.HighestBid.ToString());
 
-            txtUsuariodeOfertaMasAlta.Text = dtSubasta.Winner.ToString();
+            txtUsuariodeOfertaMasAlta.Text = dtSubasta.Users.Name.ToString();
 
         }
 
